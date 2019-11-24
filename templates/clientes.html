@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %} Clientes{% endblock %}
+
+{% block page_content %}
+
+
+<div class="page-header">
+    <h1>Lista de Clientes</h1>
+    <h4 align="center">Aviso: Si desea ingresar a la busqueda avanzada haga click <a href="searchtest2"target="_blank">AQUI</a></h4>
+</div> 
+
+
+
+<nav>
+    <table class="table table-bordered table-condensed">
+        <tbody>
+            {% for item in csv_reader %}
+                <tr>
+                    <td>{{item[0]}}</td>
+                    <td>{{item[1]}}</td>
+                    <td>{{item[2]}}</td>
+                    <td>{{item[3]}}</td>
+                    <td>{{item[4]}}</td>
+                    <td>{{item[5]}}</td>
+                    <td>{{item[6]}}</td>
+                    <td>{{item[7]}}</td>
+                </tr>
+            {% endfor%}
+        </tbody>
+    </table>
+</nav>
+
+
+
+
+
+
+
+{% endblock %}
